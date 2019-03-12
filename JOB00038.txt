@@ -1,0 +1,139 @@
+                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+
+ 
+11.06.58 JOB00038 ---- MONDAY,    25 FEB 2019 ----
+11.06.58 JOB00038  IRR010I  USERID KC03GE9  IS ASSIGNED TO THIS JOB.
+11.06.58 JOB00038  ICH70001I KC03GE9  LAST ACCESS AT 11:06:17 ON MONDAY, FEBRUARY 25, 2019
+11.06.58 JOB00038  $HASP373 KC03GE9A STARTED - INIT 1    - CLASS A        - SYS S0W1
+11.06.58 JOB00038  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+11.06.58 JOB00038  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+11.06.58 JOB00038  -KC03GE9A                      00     37 ******    .00     .0     89   0      0      0      0     0
+11.06.58 JOB00038  -KC03GE9A ENDED.  NAME-MICHAEL PETERSON     TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+11.06.58 JOB00038  $HASP395 KC03GE9A ENDED
+
+------ JES2 JOB STATISTICS ------
+
+
+  25 FEB 2019 JOB EXECUTION DATE
+
+
+           57 CARDS READ
+
+
+          107 SYSOUT PRINT RECORDS
+
+
+            0 SYSOUT PUNCH RECORDS
+
+
+           10 SYSOUT SPOOL KBYTES
+
+
+         0.00 MINUTES EXECUTION TIME
+!! END OF JES SPOOL FILE !!
+       1 //KC03GE9A JOB ,'MICHAEL PETERSON',MSGCLASS=H                           JOB00038
+       2 //STEP1    EXEC PGM=ASSIST                                              00020006
+       3 //STEPLIB  DD DSN=KC00NIU.ASSIST.LOADLIB,DISP=SHR                       00030000
+       4 //SYSPRINT DD SYSOUT=*                                                  00040000
+       5 //SYSIN    DD *                                                         00050000
+!! END OF JES SPOOL FILE !!
+ICH70001I KC03GE9  LAST ACCESS AT 11:06:17 ON MONDAY, FEBRUARY 25, 2019
+IEF236I ALLOC. FOR KC03GE9A STEP1
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSIN
+IEF142I KC03GE9A STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I KC00NIU.ASSIST.LOADLIB                       RETAINED,  DDNAME=STEPLIB 
+IEF285I   KC03GE9.KC03GE9A.JOB00038.D0000102.?         SYSOUT        
+IEF285I   KC03GE9.KC03GE9A.JOB00038.D0000101.?         SYSIN         
+IEF373I STEP/STEP1   /START 2019056.1106
+IEF032I STEP/STEP1   /STOP  2019056.1106 
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+        VIRT:   584K  SYS:   264K  EXT:        0K  SYS:    11276K
+        ATB- REAL:                    12K  SLOTS:                     0K
+             VIRT- ALLOC:       2M SHRD:       0M
+IEF375I  JOB/KC03GE9A/START 2019056.1106
+IEF033I  JOB/KC03GE9A/STOP  2019056.1106 
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+!! END OF JES SPOOL FILE !!
+
+*** ASSIST 4.0/A2-05/15/82  470/V7A/0:OS/VS2  INS=SDFP7/X=BGHO, CHECK/TRC/=1180, OPTS=CDKMPR FROM PENN ST*NIU COMPSCI*LT            
+
+                                                                                                                                    
+
+                                                                                                               PAGE    1            
+
+  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                          
+                                      1 ******************************************************************      00060000            
+                                      2 *                                                                *      00070000            
+                                      3 *  ASSIGNMENT 03A - BASIC ASSEMBLER PROGRAMING                   *      00080000            
+                                      4 *                                                                *      00090000            
+                                      5 *  DATE DUE:  02/22/2019                                         *      00100000            
+                                      6 *                                                                *      00110000            
+                                      7 *  REGISTER USE:                                                 *      00120000            
+                                      8 *                                                                *      00130002            
+                                      9 *  2     STORE VALUE OF FIRST, THEN ANSWER FOR SUBTRATION        *      00140002            
+                                     10 *  3     STORE VALUE OF SECOND                                   *      00150002            
+                                     11 *  4     STORE VALUE OF FIRST                                    *      00160002            
+                                     12 *  5     STORE VALUE OF SECOND, THEN ANSWER FOR ADDITION         *      00170000            
+                                     13 *                                                                *      00171000            
+                                     14 *  GUIDE TO COMMENT SHORTHAND                                    *      00172000            
+                                     15 *                                                                *      00173000            
+                                     16 *  REGN  REGISTER NUMBER N                                       *      00174000            
+                                     17 *  RN    ANOTHER FORM OF REGN                                    *      00175000            
+                                     18 *        UNLESS OTHERWISE NOTED NUMBERS ARE IN DECIMAL           *      00176000            
+                                     19 *                                                                *      00177000            
+                                     20 ******************************************************************      00178000            
+000000                               21 MAIN     CSECT                                                          00179101            
+000000                               22          USING MAIN,15   ESTABLISH ADDRESSABILITY ON REGISTER 15        00179201            
+                                     23 *                        ORIGANAL CODE STARTS HERE                      00179301            
+                                     24 *                                                                       00179601            
+000000 5820 F020            00020    25          L     2,FIRST   LOAD VALUE OF FIRST INTO REG2                  00179701            
+                                     26 *                        REG2 NOW HAS 142                               00179801            
+000004 5830 F024            00024    27          L     3,SECOND  LOAD VALUE OF SECOND INTO REG3                 00179901            
+                                     28 *                        REG3 NOW HAS 37                                00190000            
+                                     29 *                                                                       00200000            
+000008 1B23                          30          SR    2,3       SUBTRACT REG3 FROM REG2                        00210000            
+                                     31 *                        REG2 NOW HAS 105, REG3 UNCHANGED               00220000            
+                                     32 *                                                                       00230000            
+00000A 5840 F020            00020    33          L     4,FIRST   LOAD VALUE OF FIRST INTO REGISTER 4            00240000            
+                                     34 *                        REG4 NOW HAS 142                               00250000            
+00000E 5850 F024            00024    35          L     5,SECOND  LOAD VALUE OF SECOND INTO REGISTER 5           00260000            
+                                     36 *                        REG5 NOW HAS 37                                00270000            
+                                     37 *                                                                       00280000            
+000012 1A54                          38          AR    5,4       ADD REG4 TO REG5                               00290000            
+                                     39 *                        REG5 NOW HAS 179, REG4 UNCHANGED               00300000            
+                                     40 *                                                                       00310000            
+000014 E160 0000 0000 00000          41          XDUMP ,         LETS US VEIW WHAT IS IN REGISTERS              00320000            
+                                     42 *                                                                       00330000            
+                                     43 *                        ORIGINAL CODE ENDS HERE                        00340000            
+00001A 07FE                          44          BR    14        RETURN TO CALLER                               00341000            
+                                     45 *                                                                       00342000            
+                                     46          LTORG           LITERAL ORGANIZATION                           00343000            
+000020 0000008E                      47 FIRST    DC    F'142'    CREATE A MEMORY LOCATION CALLED                00343107            
+                                     48 *                        FIRST AND SET IT TO THE VALUE 142              00344007            
+000024 00000025                      49 SECOND   DC    F'37'     CREATE A MEMORY LOCATION CALLED                00345007            
+                                     50 *                        SECOND AND SET IT TO THE VALU 37               00346007            
+                                     51          END   MAIN      SECOND AND SET IT TO THE VALE 37               00350007            
+
+***  NO   STATEMENTS FLAGGED -  NO   WARNINGS,  NO   ERRORS                                                                         
+
+*** DYNAMIC CORE AREA USED:  LOW:    2012 HIGH:     384 LEAVING:  491172 FREE BYTES. AVERAGE:       46 BYTES/STMT ***               
+
+*** ASSEMBLY TIME =    0.000 SECS,    52000 STATEMENTS/SEC ***                                                                      
+
+*** PROGRAM EXECUTION BEGINNING - ANY OUTPUT BEFORE EXECUTION TIME MESSAGE IS PRODUCED BY USER PROGRAM ***                          
+
+BEGIN XSNAP - CALL     1 AT E000001A USER REGISTERS                                                                                 
+
+ REGS 0-7      F4F4F4F4    F4F4F4F4    00000069    00000025    0000008E    000000B3    F4F4F4F4    F4F4F4F4                         
+ REGS 8-15     F4F4F4F4    F4F4F4F4    F4F4F4F4    F4F4F4F4    F4F4F4F4    00000028    FFFE7960    00000000                         
+
+                                                                                                                                    
+
+*** EXECUTION TIME =    0.000 SECS.         8 INSTRUCTIONS EXECUTED -     8000 INSTRUCTIONS/SEC ***                                 
+
+*** FIRST CARD NOT READ: NO CARDS READ:FILE UNOPENED                                                                                
+
+*** AM004 - NORMAL USER TERMINATION BY RETURN ***                                                                                   
+!! END OF JES SPOOL FILE !!
